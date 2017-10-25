@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:sinopec:wzerp:ec5:agreement:text" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUT" targetNamespace="urn:sinopec:wzerp:ec5:agreement:text" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:wzerp:ec5:agreement:text" targetNamespace="urn:sinopec:wzerp:ec5:agreement:text" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_WZERP_AGREEMENT_TEXT_RESULT" type="p1:DT_EC5_WZERP_AGREEMENT_TEXT_RESULT" />
+      <xsd:complexType name="DT_EC5_WZERP_AGREEMENT_TEXT_RESULT">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">EC反馈框架协议合同文本处理结果数据定义</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">64087a8f7d4911e5aac50000003c6a36</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="RESULT">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8dba698dcc4d11e3cb6400215d90d210</xsd:appinfo>
+              <xsd:documentation>EC反馈给物装ERP信息</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f6a442d2cc4d11e3aa8700215d90d210</xsd:appinfo>
+                    <xsd:documentation>消息ID</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SYSNUMER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f6a442d3cc4d11e3b36000215d90d210</xsd:appinfo>
+                    <xsd:documentation>系统号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="IV_EBELN" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f6a442d4cc4d11e3ac3800215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购凭证号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="IV_ZZID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f01cc0763e0d11e4c05c008ef28ad2ce</xsd:appinfo>
+                    <xsd:documentation>序号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="IV_ZTYPE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f6a442d5cc4d11e3a70900215d90d210</xsd:appinfo>
+                    <xsd:documentation>文件类型</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="IV_STATUS" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">593186557d4911e59b76626c668312b0</xsd:appinfo>
+                    <xsd:documentation>返回结果:1成功，0失败</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="F_BYMXZD1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">593186567d4911e59276626c668312b0</xsd:appinfo>
+                    <xsd:documentation>字段备注</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_WZERP_AGREEMENT_TEXT_RESULT">
+    <wsdl:documentation />
+    <wsdl:part name="MT_WZERP_AGREEMENT_TEXT_RESULT" element="p1:MT_WZERP_AGREEMENT_TEXT_RESULT" />
+  </wsdl:message>
+  <wsdl:portType name="SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_WZERP_AGREEMENT_TEXT_RESULT" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUTBinding" type="p1:SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Awzerp%3Aec5%3Aagreement%3Atext" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Awzerp%3Aec5%3Aagreement%3Atext" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

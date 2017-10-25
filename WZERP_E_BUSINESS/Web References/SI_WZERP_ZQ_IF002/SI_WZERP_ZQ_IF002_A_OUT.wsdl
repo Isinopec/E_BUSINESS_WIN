@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:p1="urn:sinopec:ec5:zq:agreement" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_WZERP_ZQ_IF002_A_OUT" targetNamespace="urn:sinopec:ec5:zq:agreement" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+  <wsp:UsingPolicy s0:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_WZERP_ZQ_IF002_A_OUT" />
+  <s0:types>
+    <xsd:schema xmlns="urn:sinopec:ec5:zq:agreement" targetNamespace="urn:sinopec:ec5:zq:agreement" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_EC5_ZQ_IF002_REQ" type="p1:DT_EC5_ZQ_IF002_REQ" />
+      <xsd:complexType name="DT_EC5_ZQ_IF002_REQ">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">EC发送采购方案供应商信息请求数据定义</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">97c67a125a0b11e684f00000003c6a36</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="STOCKAFFIRMSUPP">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">bc991108cc4b11e3c2c000215d90d210</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c08cc4c11e3a0e800215d90d210</xsd:appinfo>
+                    <xsd:documentation>消息唯一标识</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRN" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c09cc4c11e38d7300215d90d210</xsd:appinfo>
+                    <xsd:documentation>系统标识</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="COMPCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c0acc4c11e386e900215d90d210</xsd:appinfo>
+                    <xsd:documentation>企业编码</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="COMPORG" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c0bcc4c11e3b8e500215d90d210</xsd:appinfo>
+                    <xsd:documentation>企业采购组织</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STOCKAFFIRM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c0ccc4c11e3c15600215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购方案ID</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SENDTIME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c0dcc4c11e39e4800215d90d210</xsd:appinfo>
+                    <xsd:documentation>发送时间</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="STOCKAFFIRMSUPPPART">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8dba698dcc4d11e3cb6400215d90d210</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="ITEMNO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f6a442d2cc4d11e3aa8700215d90d210</xsd:appinfo>
+                    <xsd:documentation>行项目号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STOCKORDER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f6a442d3cc4d11e3b36000215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购申请ID</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SUPPCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">e7b4775af84611e3a6c600215d90d210</xsd:appinfo>
+                    <xsd:documentation>供应商编码</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </s0:types>
+  <s0:message name="MT_EC5_ZQ_IF002_REQ">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <s0:part name="MT_EC5_ZQ_IF002_REQ" element="p1:MT_EC5_ZQ_IF002_REQ" />
+  </s0:message>
+  <s0:portType name="SI_WZERP_ZQ_IF002_A_OUT">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <s0:operation name="SI_WZERP_ZQ_IF002_A_OUT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_WZERP_ZQ_IF002_A_OUT" />
+      </wsp:Policy>
+      <s0:input message="p1:MT_EC5_ZQ_IF002_REQ" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="SI_WZERP_ZQ_IF002_A_OUTBinding" type="p1:SI_WZERP_ZQ_IF002_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <s0:operation name="SI_WZERP_ZQ_IF002_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <s0:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </s0:input>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="SI_WZERP_ZQ_IF002_A_OUTService">
+    <s0:port name="HTTP_Port" binding="p1:SI_WZERP_ZQ_IF002_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_WZERP_ZQ_IF002_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Azq%3Aagreement" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </s0:port>
+    <s0:port name="HTTPS_Port" binding="p1:SI_WZERP_ZQ_IF002_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_WZERP_ZQ_IF002_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Azq%3Aagreement" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

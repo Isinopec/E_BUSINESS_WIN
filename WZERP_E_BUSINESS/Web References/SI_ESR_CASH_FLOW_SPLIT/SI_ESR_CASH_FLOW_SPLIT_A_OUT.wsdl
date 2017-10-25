@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:sinopec:ecc:fi:ecs" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_ESR_CASH_FLOW_SPLIT_A_OUT" targetNamespace="urn:sinopec:ecc:fi:ecs" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_ESR_CASH_FLOW_SPLIT_A_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:ecc:fi:ecs" targetNamespace="urn:sinopec:ecc:fi:ecs" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_ERS_CASH_FLOW_SPLIT_REQ" type="p1:DT_ERS_CASH_FLOW_SPLIT_REQ" />
+      <xsd:complexType name="DT_ERS_CASH_FLOW_SPLIT_REQ">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">费用报销系统现金流量拆分集成请求数据定义</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">fc57402fff8f11e595540000003c6a37</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="IV_ZPZID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c190d46eff9011e5bcc5626c668312b0</xsd:appinfo>
+              <xsd:documentation>凭证ID</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="IV_ZECSID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c190d46fff9011e59c48626c668312b0</xsd:appinfo>
+              <xsd:documentation>费用报销系统业务单号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element maxOccurs="unbounded" name="IT_ITEM">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">f68c95fbf87b11e4cbc1626c668312b0</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="BUKRS" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95e6f87b11e4c205626c668312b0</xsd:appinfo>
+                    <xsd:documentation>公司代码 ，路由字段，必输</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BELNR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95e7f87b11e4c44a626c668312b0</xsd:appinfo>
+                    <xsd:documentation>会计凭证编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="GJAHR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95e9f87b11e4a219626c668312b0</xsd:appinfo>
+                    <xsd:documentation>会计年度</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="HKONT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95e8f87b11e49e31626c668312b0</xsd:appinfo>
+                    <xsd:documentation>总分类帐帐目</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BELNR1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95eaf87b11e4ce3d626c668312b0</xsd:appinfo>
+                    <xsd:documentation>现金流量凭证号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BUZEI" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95ebf87b11e4afd2626c668312b0</xsd:appinfo>
+                    <xsd:documentation>现金流量行项目号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BLART" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95ecf87b11e4a9e6626c668312b0</xsd:appinfo>
+                    <xsd:documentation>凭证类型</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BUDAT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95edf87b11e4a50f626c668312b0</xsd:appinfo>
+                    <xsd:documentation>凭证中的过帐日期</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="MONAT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95eef87b11e4c633626c668312b0</xsd:appinfo>
+                    <xsd:documentation>会计期间</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PRCTR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95eff87b11e4cc89626c668312b0</xsd:appinfo>
+                    <xsd:documentation>利润中心</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="GSBER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95f0f87b11e4a3af626c668312b0</xsd:appinfo>
+                    <xsd:documentation>业务范围</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="VBUND" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95f1f87b11e4a7a4626c668312b0</xsd:appinfo>
+                    <xsd:documentation>贸易伙伴的公司标识</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="VCFLAG" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">33fa25ccff9c11e4bea2626c668312b0</xsd:appinfo>
+                    <xsd:documentation>贸易伙伴修改标识</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WAERS" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95f2f87b11e4c2ed626c668312b0</xsd:appinfo>
+                    <xsd:documentation>货币码</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WRBTR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95f3f87b11e4a816626c668312b0</xsd:appinfo>
+                    <xsd:documentation>凭证货币金额</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="HWAER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f68c95f4f87b11e4c6e9626c668312b0</xsd:appinfo>
+                    <xsd:documentation>本币</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DMBTR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c190f099ff9011e580ab626c668312b0</xsd:appinfo>
+                    <xsd:documentation>按本位币计的金额</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RSTGR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c190f09aff9011e5ab23626c668312b0</xsd:appinfo>
+                    <xsd:documentation>现金流向</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TXT40" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c190f09bff9011e5bca0626c668312b0</xsd:appinfo>
+                    <xsd:documentation>现金流向描述</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="CCFLAG" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c190f09cff9011e5a3b4626c668312b0</xsd:appinfo>
+                    <xsd:documentation>现金流向修改标识</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="CCTXT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c190f09dff9011e5919d626c668312b0</xsd:appinfo>
+                    <xsd:documentation>现金流向修改文本</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="USNAM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c190f09eff9011e5cf02626c668312b0</xsd:appinfo>
+                    <xsd:documentation>财务凭证制单人</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="LIFNR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c190f09fff9011e5cff1626c668312b0</xsd:appinfo>
+                    <xsd:documentation>供应商或债权人的帐号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SGTXT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c190f0a0ff9011e592f9626c668312b0</xsd:appinfo>
+                    <xsd:documentation>项目文本</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZUONR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">c190f0a1ff9011e595e2626c668312b0</xsd:appinfo>
+                    <xsd:documentation>分配编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_ERS_CASH_FLOW_SPLIT_REQ">
+    <wsdl:documentation />
+    <wsdl:part name="MT_ERS_CASH_FLOW_SPLIT_REQ" element="p1:MT_ERS_CASH_FLOW_SPLIT_REQ" />
+  </wsdl:message>
+  <wsdl:portType name="SI_ESR_CASH_FLOW_SPLIT_A_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_ESR_CASH_FLOW_SPLIT_A_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_ESR_CASH_FLOW_SPLIT_A_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_ERS_CASH_FLOW_SPLIT_REQ" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_ESR_CASH_FLOW_SPLIT_A_OUTBinding" type="p1:SI_ESR_CASH_FLOW_SPLIT_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_ESR_CASH_FLOW_SPLIT_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_ESR_CASH_FLOW_SPLIT_A_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_ESR_CASH_FLOW_SPLIT_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_ECS_PR&amp;receiverParty=&amp;receiverService=&amp;interface=SI_ESR_CASH_FLOW_SPLIT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aecc%3Afi%3Aecs" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_ESR_CASH_FLOW_SPLIT_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_ECS_PR&amp;receiverParty=&amp;receiverService=&amp;interface=SI_ESR_CASH_FLOW_SPLIT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aecc%3Afi%3Aecs" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

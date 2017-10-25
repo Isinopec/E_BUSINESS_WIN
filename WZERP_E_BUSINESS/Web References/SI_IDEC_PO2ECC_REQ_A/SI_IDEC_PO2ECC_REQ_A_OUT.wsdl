@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:p1="urn:sinopec:ecc:mm:idec_mro" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_IDEC_PO2ECC_REQ_A_OUT" targetNamespace="urn:sinopec:ecc:mm:idec_mro" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+  <wsp:UsingPolicy s0:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_IDEC_PO2ECC_REQ_A_OUT" />
+  <s0:types>
+    <xsd:schema xmlns="urn:sinopec:ecc:mm:idec_mro" targetNamespace="urn:sinopec:ecc:mm:idec_mro" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_IDEC_PO2ECC_REQ" type="p1:DT_IDEC_PO2ECC_REQ" />
+      <xsd:complexType name="DT_IDEC_PO2ECC_REQ">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">工业品电商平台采购订单（含电子超市与专业市场）上传ERP集成接口数据定义</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">bc6c7efdef0111e494cb0000003c6a36</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="IT_ZMROSZYSCPOH">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">619b373aaeac11e48e3300215d90d210</xsd:appinfo>
+              <xsd:documentation>专业市场订单抬头数据</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3707aeac11e494f100215d90d210</xsd:appinfo>
+                    <xsd:documentation>消息号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="LOGSYS" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3708aeac11e4c95a00215d90d210</xsd:appinfo>
+                    <xsd:documentation>逻辑系统（用于标识数据来源）</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="VENDOR_NO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b370aaeac11e4af6e00215d90d210</xsd:appinfo>
+                    <xsd:documentation>供应商或债权人的帐号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="WERKS" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b370baeac11e4a5f800215d90d210</xsd:appinfo>
+                    <xsd:documentation>工厂</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PUR_ORG" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b370caeac11e494d800215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购组织</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PUR_GRP" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b370daeac11e49e6500215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购组</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PUR_DATE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b370eaeac11e4875e00215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购订单日期</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZIDECDDH" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b370faeac11e4894200215d90d210</xsd:appinfo>
+                    <xsd:documentation>电子超市订单号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZIDECKEY" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">a58e74dcc0af11e4cdbe00215d90d210</xsd:appinfo>
+                    <xsd:documentation>电商平台订单键值</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="UNAME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3710aeac11e4831000215d90d210</xsd:appinfo>
+                    <xsd:documentation>电商平台下载业务用户（电商需转化为ERP账号）</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DOC_TYPE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3711aeac11e4806c00215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购凭证类型</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BUKRS" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3712aeac11e4b4e600215d90d210</xsd:appinfo>
+                    <xsd:documentation>企业码（8位）</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RESERVE1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3713aeac11e4cea800215d90d210</xsd:appinfo>
+                    <xsd:documentation>备用1</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RESERVE2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3714aeac11e4af5700215d90d210</xsd:appinfo>
+                    <xsd:documentation>备用2</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RESERVE3" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3715aeac11e4a02700215d90d210</xsd:appinfo>
+                    <xsd:documentation>备用3</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RESERVE4" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3716aeac11e49b4300215d90d210</xsd:appinfo>
+                    <xsd:documentation>备用4</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RESERVE5" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3717aeac11e48a1e00215d90d210</xsd:appinfo>
+                    <xsd:documentation>备用5</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RESERVE6" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3718aeac11e4a0dd00215d90d210</xsd:appinfo>
+                    <xsd:documentation>备用6</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RESERVE7" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3719aeac11e4b44800215d90d210</xsd:appinfo>
+                    <xsd:documentation>备用7</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RESERVE8" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b371aaeac11e4ba7e00215d90d210</xsd:appinfo>
+                    <xsd:documentation>备用8</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="IT_ZMROSZYSCPOL">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">619b3739aeac11e48c0500215d90d210</xsd:appinfo>
+              <xsd:documentation>专业市场订单行项目数据</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="ZIDECKJXY" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b371baeac11e4836700215d90d210</xsd:appinfo>
+                    <xsd:documentation>框架协议号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZIDECDDH" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b371caeac11e49b9600215d90d210</xsd:appinfo>
+                    <xsd:documentation>电子超市订单号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZIDECDDHXMH" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b371daeac11e49a5800215d90d210</xsd:appinfo>
+                    <xsd:documentation>电子超市订单行项目号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="MAT_CODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b371eaeac11e4c30e00215d90d210</xsd:appinfo>
+                    <xsd:documentation>物料号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PR_NO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b371faeac11e4a94200215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购计划单编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="KNTTP" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3720aeac11e4bd0500215d90d210</xsd:appinfo>
+                    <xsd:documentation>科目分配类别（特殊标记）</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="KOSTL" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f4c0f845be4f11e49f8500215d90d210</xsd:appinfo>
+                    <xsd:documentation>成本中心</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="HKONT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">01632df8d2d011e4cb2a626c668312b0</xsd:appinfo>
+                    <xsd:documentation>移动类型</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BWART" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">bd02de5bef0111e4b69b626c668312b0</xsd:appinfo>
+                    <xsd:documentation>项目定义</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PSPID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">bd02de5cef0111e4b675626c668312b0</xsd:appinfo>
+                    <xsd:documentation>总账科目</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZPOSIDPR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3721aeac11e4b72d00215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购申请关联WBS</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZPOSIDPRTXT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3722aeac11e4cc0f00215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购申请关联WBS描述</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="QUANTITY" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3723aeac11e4b51000215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购订单数量</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PRICE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3724aeac11e4b15e00215d90d210</xsd:appinfo>
+                    <xsd:documentation>单价(含税)</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TRANSPORT_FEE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3725aeac11e48ad300215d90d210</xsd:appinfo>
+                    <xsd:documentation>运费</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="INTFREE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3726aeac11e49ddb00215d90d210</xsd:appinfo>
+                    <xsd:documentation>杂费</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="KBETR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f4c0f847be4f11e48aaa00215d90d210</xsd:appinfo>
+                    <xsd:documentation>运费税率(取%之前的数)</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="OTHER_FEE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3727aeac11e48fb700215d90d210</xsd:appinfo>
+                    <xsd:documentation>其他费用</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TAX_CODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">0541c6febe5011e49c0600215d90d210</xsd:appinfo>
+                    <xsd:documentation>销售税代码</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="UNIT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3729aeac11e4cfd200215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购订单的计量单位</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DELIV_DATE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b372baeac11e4a2a600215d90d210</xsd:appinfo>
+                    <xsd:documentation>项目交货日期</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STOCK_NAME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b372caeac11e4b0b900215d90d210</xsd:appinfo>
+                    <xsd:documentation>仓储地点的描述</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRORDERCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b372daeac11e4972200215d90d210</xsd:appinfo>
+                    <xsd:documentation>电商采购申请编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZCGBZ" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b372faeac11e4bfca00215d90d210</xsd:appinfo>
+                    <xsd:documentation>采购备注字段</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZBDBZ" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3730aeac11e49e5c00215d90d210</xsd:appinfo>
+                    <xsd:documentation>物料本地备注</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZECFWRATE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">e4bc9141be5011e4a2f800215d90d210</xsd:appinfo>
+                    <xsd:documentation>资金节约率（保留2位小数）（%需要转化为真实小数）</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZYL1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3731aeac11e4a44d00215d90d210</xsd:appinfo>
+                    <xsd:documentation>预留字段1</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZYL2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3732aeac11e4a68c00215d90d210</xsd:appinfo>
+                    <xsd:documentation>预留字段2</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZYL3" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3733aeac11e4bbeb00215d90d210</xsd:appinfo>
+                    <xsd:documentation>预留字段3</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZYL4" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3734aeac11e4b74200215d90d210</xsd:appinfo>
+                    <xsd:documentation>预留字段4</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZYL5" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3735aeac11e48aad00215d90d210</xsd:appinfo>
+                    <xsd:documentation>预留字段5</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZYL6" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3736aeac11e4b4c500215d90d210</xsd:appinfo>
+                    <xsd:documentation>预留字段6</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZYL7" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3737aeac11e4ada700215d90d210</xsd:appinfo>
+                    <xsd:documentation>预留字段7</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZYL8" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">619b3738aeac11e4c4e700215d90d210</xsd:appinfo>
+                    <xsd:documentation>预留字段8</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </s0:types>
+  <s0:message name="MT_IDEC_PO2ECC_REQ">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <s0:part name="MT_IDEC_PO2ECC_REQ" element="p1:MT_IDEC_PO2ECC_REQ" />
+  </s0:message>
+  <s0:portType name="SI_IDEC_PO2ECC_REQ_A_OUT">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <s0:operation name="SI_IDEC_PO2ECC_REQ_A_OUT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_IDEC_PO2ECC_REQ_A_OUT" />
+      </wsp:Policy>
+      <s0:input message="p1:MT_IDEC_PO2ECC_REQ" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="SI_IDEC_PO2ECC_REQ_A_OUTBinding" type="p1:SI_IDEC_PO2ECC_REQ_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <s0:operation name="SI_IDEC_PO2ECC_REQ_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <s0:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </s0:input>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="SI_IDEC_PO2ECC_REQ_A_OUTService">
+    <s0:port name="HTTP_Port" binding="p1:SI_IDEC_PO2ECC_REQ_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_IDEC_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_IDEC_PO2ECC_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aecc%3Amm%3Aidec_mro" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </s0:port>
+    <s0:port name="HTTPS_Port" binding="p1:SI_IDEC_PO2ECC_REQ_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_IDEC_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_IDEC_PO2ECC_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aecc%3Amm%3Aidec_mro" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

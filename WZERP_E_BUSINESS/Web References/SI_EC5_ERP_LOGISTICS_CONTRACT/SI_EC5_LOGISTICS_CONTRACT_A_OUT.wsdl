@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:sinopec:ec5:wzerp:contract" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_EC5_LOGISTICS_CONTRACT_A_OUT" targetNamespace="urn:sinopec:ec5:wzerp:contract" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_EC5_LOGISTICS_CONTRACT_A_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:ec5:wzerp:contract" targetNamespace="urn:sinopec:ec5:wzerp:contract" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="CONTRACTWL">
+        <xsd:annotation>
+          <xsd:documentation>物流合同信息下载 (物装ERP)</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>消息号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="STRSYSNUMBER" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>系统号+Client号 如:P33900</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="PONO" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>合同编号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ECPONO" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>EC合同ID</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SUPPCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>供应商标准编码</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="VENDORCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>实际供货方（可空)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CORPCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>企业码</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CORPCODEN4" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>下载企业码4位</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ERPGROUP" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>采购组</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CREATEUSER" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>用户登录名</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="DASUBTIME" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>数据生成时间</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="KONNR" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>框架协议号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="STOCKTYPE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>采购方式</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="TOTALSAVEAMOUNT" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>总节约资金</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CREATEDATE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>采购合同创建日期</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="OUTPORT" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>发货港</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ARRIVEPORT" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>到货港</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="DOWNLOADDATE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>下载时间</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="IFLAG" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>变更标记(U变更、N新建)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="CONTRACTWLMAT">
+              <xsd:annotation>
+                <xsd:documentation>物料信息</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="PRNO" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>采购申请号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="ECORDERCODE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>EC订单编号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="PRODCODE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>物料</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="YFBZ" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>运费币种</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="YFHL" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>运费汇率</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="DASTARTDATE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>起运时间</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="DAENDDATE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>到达时间</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GWZXF" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国外装箱费</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GWGKFY" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国外港口费用</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GWBGBJ" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国外报关报检费</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GWLYF" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国外陆运费</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GWHYF" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国外海运费</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GWKYF" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国外空运费</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GWQTFY" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国外其它费用</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GWFYBZ" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国外费用备注</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GNBGBJ" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国内报关报检费</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GNGKFY" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国内港口费用</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GNCXF" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国内拆箱费</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GNLYF" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国内陆运费</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GNSYF" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国内水运费</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GNKYF" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国内空运费</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GNQTFY" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国内其它费用</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="GNFYBZ" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国内费用备注</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="INTTAX" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>税码</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="INTAVGPRICE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>平均价</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="ENQUTYPE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>国贸条款</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="TECHSTANDARD" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>技术标准</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p1.CONTRACTWL">
+    <wsdl:documentation />
+    <wsdl:part name="CONTRACTWL" element="p1:CONTRACTWL" />
+  </wsdl:message>
+  <wsdl:portType name="SI_EC5_LOGISTICS_CONTRACT_A_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_EC5_LOGISTICS_CONTRACT_A_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_EC5_LOGISTICS_CONTRACT_A_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:p1.CONTRACTWL" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_EC5_LOGISTICS_CONTRACT_A_OUTBinding" type="p1:SI_EC5_LOGISTICS_CONTRACT_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_EC5_LOGISTICS_CONTRACT_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_EC5_LOGISTICS_CONTRACT_A_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_EC5_LOGISTICS_CONTRACT_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_LOGISTICS_CONTRACT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Acontract" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_EC5_LOGISTICS_CONTRACT_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_LOGISTICS_CONTRACT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Acontract" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

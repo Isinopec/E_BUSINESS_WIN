@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:sinopec:ec5:zq:agreement" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_WZERP_ZQ_IF003_A_OUT" targetNamespace="urn:sinopec:ec5:zq:agreement" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_WZERP_ZQ_IF003_A_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:ec5:zq:agreement" targetNamespace="urn:sinopec:ec5:zq:agreement" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_EC5_ZQ_IF003_REQ" type="p1:DT_EC5_ZQ_IF003_REQ" />
+      <xsd:complexType name="DT_EC5_ZQ_IF003_REQ">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">EC发送关闭ZQ框架协议信息请求数据定义</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">0ccf5ced5ade11e6831a0000003c6a37</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="AGREEMENTCLOSE">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">bc991108cc4b11e3c2c000215d90d210</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c08cc4c11e3a0e800215d90d210</xsd:appinfo>
+                    <xsd:documentation>消息唯一标识</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRN" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c09cc4c11e38d7300215d90d210</xsd:appinfo>
+                    <xsd:documentation>系统标识</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SENDTIME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c0acc4c11e386e900215d90d210</xsd:appinfo>
+                    <xsd:documentation>发送时间</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="AGRSTATUS" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c0bcc4c11e3b8e500215d90d210</xsd:appinfo>
+                    <xsd:documentation>合同状态</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="OPERATEUSER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c0ccc4c11e3c15600215d90d210</xsd:appinfo>
+                    <xsd:documentation>签署人或关闭人</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="OPERATEDATE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c0dcc4c11e39e4800215d90d210</xsd:appinfo>
+                    <xsd:documentation>签署日期或关闭日期</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="AGRCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c0ecc4c11e3800900215d90d210</xsd:appinfo>
+                    <xsd:documentation>EC物资框架协议编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SAPAGRCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c0fcc4c11e3aab700215d90d210</xsd:appinfo>
+                    <xsd:documentation>SAP框架协议编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="MODIFYCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b0045c10cc4c11e3b40200215d90d210</xsd:appinfo>
+                    <xsd:documentation>变更编码</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="OPERATETYPE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">7a282db8f84811e395db00215d90d210</xsd:appinfo>
+                    <xsd:documentation>操作类型</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="YL1" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">14a26ebf594b11e6a125626c668312b0</xsd:appinfo>
+                    <xsd:documentation>预留1</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="YL2" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">14a26ec0594b11e6845e626c668312b0</xsd:appinfo>
+                    <xsd:documentation>预留2</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="YL3" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">14a26ec1594b11e69643626c668312b0</xsd:appinfo>
+                    <xsd:documentation>预留3</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="YL4" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">14a26ec2594b11e6ad4b626c668312b0</xsd:appinfo>
+                    <xsd:documentation>预留4</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="YL5" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">14a26ec3594b11e6859a626c668312b0</xsd:appinfo>
+                    <xsd:documentation>预留5</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_EC5_ZQ_IF003_REQ">
+    <wsdl:documentation />
+    <wsdl:part name="MT_EC5_ZQ_IF003_REQ" element="p1:MT_EC5_ZQ_IF003_REQ" />
+  </wsdl:message>
+  <wsdl:portType name="SI_WZERP_ZQ_IF003_A_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_WZERP_ZQ_IF003_A_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_WZERP_ZQ_IF003_A_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_EC5_ZQ_IF003_REQ" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_WZERP_ZQ_IF003_A_OUTBinding" type="p1:SI_WZERP_ZQ_IF003_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_WZERP_ZQ_IF003_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_WZERP_ZQ_IF003_A_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_WZERP_ZQ_IF003_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_WZERP_ZQ_IF003_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Azq%3Aagreement" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_WZERP_ZQ_IF003_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_WZERP_ZQ_IF003_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Azq%3Aagreement" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

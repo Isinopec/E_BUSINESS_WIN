@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:sinopec:ec5:bid:transfer" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_WZERP_BID_TRANSFER_REQ_A_OUT" targetNamespace="urn:sinopec:ec5:bid:transfer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_WZERP_BID_TRANSFER_REQ_A_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:ec5:bid:transfer" targetNamespace="urn:sinopec:ec5:bid:transfer" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_EC5_BID_TRANSFER_REQ" type="p1:DT_EC5_BID_TRANSFER_REQ" />
+      <xsd:complexType name="DT_EC5_BID_TRANSFER_REQ">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">EC保证金转移及罚没传输请求接口</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">d79ae719f4b411e68bd30000003c6a37</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="BIDTRANSFER">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">db7ebcd7f4b411e6b1ba606c668312b1</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88424874f3e811e6bbc76236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>消息ID</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="SYSNUMER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88424875f3e811e69d6d6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>系统号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="COMPANY" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842735bf3e811e6a53c6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>公司ID</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="TRANSNUM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842735cf3e811e68b536236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>申请单编码</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DJTYPE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842735df3e811e6a08b6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>单据类型</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BIDCONSIGN" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842735ef3e811e680736236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>委托单ID</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="BIDFILECODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842735ff3e811e69b1b6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>招标编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PACKID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427360f3e811e6a2346236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>包编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PACKCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427361f3e811e6b0b46236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>包序号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZRBIDCONSIGN" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427362f3e811e6cd2b6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>转入委托单ID</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZRBIDFILECODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427363f3e811e6c63d6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>转入招标编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZRPACKID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427364f3e811e6ba5f6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>转入包编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZRPACKCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427365f3e811e6adbc6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>转入包序号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRZBBM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427366f3e811e692466236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>供应商标准编码</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRCORPNAME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427367f3e811e6c1396236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>供应商全称</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="CURRENCY" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427368f3e811e687ae6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>币种</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DJAMOUNT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427369f3e811e6893a6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>单据金额</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="AMOUNT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842736af3e811e6a1536236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>保证金金额</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="REMARK" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842736bf3e811e6ad2f6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>摘要或备注</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DATUM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842736cf3e811e6b82b6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>回款日期</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="UZEIT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842736df3e811e6ab546236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>发送时间</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="REALNAME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842736ef3e811e69fe96236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>招标业务员姓名</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="VOUCHER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8842736ff3e811e6cdb86236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>会计凭证号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="VOUCHERYEAR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">88427370f3e811e69efb6236dd6a4b13</xsd:appinfo>
+                    <xsd:documentation>会计年度</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZCZLX" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">db7ebcd6f4b411e694e3606c668312b1</xsd:appinfo>
+                    <xsd:documentation>操作类型(1.新增/2.冲销)</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_EC5_BID_TRANSFER_REQ">
+    <wsdl:documentation />
+    <wsdl:part name="MT_EC5_BID_TRANSFER_REQ" element="p1:MT_EC5_BID_TRANSFER_REQ" />
+  </wsdl:message>
+  <wsdl:portType name="SI_WZERP_BID_TRANSFER_REQ_A_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_WZERP_BID_TRANSFER_REQ_A_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_WZERP_BID_TRANSFER_REQ_A_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_EC5_BID_TRANSFER_REQ" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_WZERP_BID_TRANSFER_REQ_A_OUTBinding" type="p1:SI_WZERP_BID_TRANSFER_REQ_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_WZERP_BID_TRANSFER_REQ_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_WZERP_BID_TRANSFER_REQ_A_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_WZERP_BID_TRANSFER_REQ_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_WZERP_BID_TRANSFER_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Abid%3Atransfer" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_WZERP_BID_TRANSFER_REQ_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_WZERP_BID_TRANSFER_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Abid%3Atransfer" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

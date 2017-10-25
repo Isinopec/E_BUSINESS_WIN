@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:p1="urn:sinopec:ec5:agreement" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_EC5_ERP_AGREEMENT_A_OUT" targetNamespace="urn:sinopec:ec5:agreement" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+  <wsp:UsingPolicy s0:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_EC5_ERP_AGREEMENT_A_OUT" />
+  <s0:types>
+    <xsd:schema xmlns="urn:sinopec:ec5:agreement" targetNamespace="urn:sinopec:ec5:agreement" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="AGREEMENT">
+        <xsd:annotation>
+          <xsd:documentation>框架协议</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>消息号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="STRN" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>系统号+Client号 如:P33900</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="AGRCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>框架协议编码  STRAGREECODE</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="AGRNAME" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>框架协议名称</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="AGRPROJCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>框架协议方案编码</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SIGNTYPE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>框架协议签约方式</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="AGRVERSION" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>协议版本号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="AGRCONTRACTCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>框架协议合同号 (CMIS)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="AGREETYPE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>框架协议类1数量 2价值 3价格 4量价 5其它</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CREATECORP" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>签约单位：协议编制单位（标准编码）</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CREATEDEPT" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>签约处室</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SIGNDATE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>签订时间(日期)：yyyymmdd</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SIGNUSER" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>签约用户</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SIGNSUPP" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>供应商标准编码</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SIGNSUPPNAME" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>供应商名称</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SUPPQUOTA" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>供应商配额</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="STARTDATE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>开始有效期(YYYYMMDD)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ENDDATE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>结束有效期(YYYYMMDD)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SUBTIME" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>录入时间(YYYYMMDDHImmSS)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SENDTIME" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>录入时间(YYYYMMDDHImmSS)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="STOCKTYPE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>采购方式：1 公开询价 2定向询价 4邀请招标 12竞价</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="BIDCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>招标编号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ATTRTYPE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>采购类型：1集团采购 2统一组织采购 3企业自采</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="INTTYPE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>协议维护操作：1新建、2变更、3停用、4启用、5关闭、9来源于编码网站</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ATTACHMENTURL" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>协议附件下载地址</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="REMARKTEXT" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>协议条款文本字段（备注）</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="PROJCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>对应EC寻源方案编号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="STOCKAFFCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>对应EC寻源结果编号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="TAXRATE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>税率</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="TARGETVALUE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>协议总额(价值协议时有值)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CURRENCY" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>币种</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SAVINGRATE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>节约率</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="AgreementENT">
+              <xsd:annotation>
+                <xsd:documentation>下载企业的信息</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="CORPCODE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>执行企业编码</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="CORPNAME" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>执行企业名称</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="CORPTYPE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>企业类型，10 集团 20股份 30外部单位</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="ERPORG" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>执行企业ERP采购组织</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="ERPGROUP" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>执行企业ERP采购组</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="ERPGROUPNAME" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>执行企业ERP采购组名称</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="ERPFACTORY" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>执行企业ERP工厂</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="ERPFACTORYNAME" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>执行企业ERP工厂名称</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="CORPAMOUNT" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>执行企业执行数量额值(数量协议)</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="CORPTARGETVALUE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>执行企业执行份额值(价值协议)</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="AgreementMAT">
+                    <xsd:annotation>
+                      <xsd:documentation>下载企业的物资数据</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" name="ITEMNO" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>行项目号</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="ITEMTYPE" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>行项目类型 1表示16位物资编码 2表示6位或者8位编码</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="PRODCLASS" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>物料小类编码</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="PRODCODE" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>物资编码</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="PRODNAME" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>物料名称描述</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="UNIT" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>计量单位</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="ERPUNIT" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>ERP计量单位</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="QUANTITY" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>数量</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="PRICE" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>单价</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="AVGPRICE" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>平均价</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </s0:types>
+  <s0:message name="p1.AGREEMENT">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <s0:part name="AGREEMENT" element="p1:AGREEMENT" />
+  </s0:message>
+  <s0:portType name="SI_EC5_ERP_AGREEMENT_A_OUT">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <s0:operation name="SI_EC5_ERP_AGREEMENT_A_OUT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_EC5_ERP_AGREEMENT_A_OUT" />
+      </wsp:Policy>
+      <s0:input message="p1:p1.AGREEMENT" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="SI_EC5_ERP_AGREEMENT_A_OUTBinding" type="p1:SI_EC5_ERP_AGREEMENT_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <s0:operation name="SI_EC5_ERP_AGREEMENT_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <s0:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </s0:input>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="SI_EC5_ERP_AGREEMENT_A_OUTService">
+    <s0:port name="HTTP_Port" binding="p1:SI_EC5_ERP_AGREEMENT_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_ERP_AGREEMENT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Aagreement" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </s0:port>
+    <s0:port name="HTTPS_Port" binding="p1:SI_EC5_ERP_AGREEMENT_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_ERP_AGREEMENT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Aagreement" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

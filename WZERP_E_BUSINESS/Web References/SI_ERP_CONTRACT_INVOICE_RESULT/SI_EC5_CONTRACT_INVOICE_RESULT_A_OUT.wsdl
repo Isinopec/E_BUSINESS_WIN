@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:sinopec:ec5:wzerp:contract" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_EC5_CONTRACT_INVOICE_RESULT_A_OUT" targetNamespace="urn:sinopec:ec5:wzerp:contract" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_EC5_CONTRACT_INVOICE_RESULT_A_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:ec5:wzerp:contract" targetNamespace="urn:sinopec:ec5:wzerp:contract" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_EC5_ERP_CONTRACT_INVOICE_RESULT" type="p1:DT_EC5_CONTRACT_INVOICE_RESULT" />
+      <xsd:complexType name="DT_EC5_CONTRACT_INVOICE_RESULT">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">物装ERP调拨单销售发票传输到EC5.0处理结果反馈数据定义</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">ae28c1a5e4af11e3b3d40000003c6a36</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">e9345690d4f211e3a5c100215d90d210</xsd:appinfo>
+              <xsd:documentation>消息ID</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="STRSYSNUMBER" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8a05e0cecf7f11e38e5700215d90d210</xsd:appinfo>
+              <xsd:documentation>接口系统标识:SAP SID+Client如:P33900</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="VBELN" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8a05e0cdcf7f11e3b23300215d90d210</xsd:appinfo>
+              <xsd:documentation>ERP系统发票号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="VATNO" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8a05e0d8cf7f11e3b02600215d90d210</xsd:appinfo>
+              <xsd:documentation>金税发票号码(目前为空)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="CORPCODE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8a05e0d4cf7f11e38c3400215d90d210</xsd:appinfo>
+              <xsd:documentation>公司代码</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="RESULT" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8a05e0d3cf7f11e389c900215d90d210</xsd:appinfo>
+              <xsd:documentation>处理结果：0成功，1失败并返回具体的行项目处理结果,2已接收，正在处理</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="RESTIME" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8a05e0d2cf7f11e3c8d300215d90d210</xsd:appinfo>
+              <xsd:documentation>处理时间</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="RESDESC" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8a05e0d0cf7f11e390c100215d90d210</xsd:appinfo>
+              <xsd:documentation>处理描述</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="INVOICEMATRESULT">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">016f6626cf7f11e3ab5a00215d90d210</xsd:appinfo>
+              <xsd:documentation>返回结果定义</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="INVOICEITEM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8a05e0cccf7f11e397a700215d90d210</xsd:appinfo>
+                    <xsd:documentation>出具发票项目</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PRODCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8a05e0d5cf7f11e3927e00215d90d210</xsd:appinfo>
+                    <xsd:documentation>物料号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="RESDESC" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8a05e0d6cf7f11e3a5c100215d90d210</xsd:appinfo>
+                    <xsd:documentation>处理描述</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_EC5_ERP_CONTRACT_INVOICE_RESULT">
+    <wsdl:documentation />
+    <wsdl:part name="MT_EC5_ERP_CONTRACT_INVOICE_RESULT" element="p1:MT_EC5_ERP_CONTRACT_INVOICE_RESULT" />
+  </wsdl:message>
+  <wsdl:portType name="SI_EC5_CONTRACT_INVOICE_RESULT_A_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_EC5_CONTRACT_INVOICE_RESULT_A_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_EC5_CONTRACT_INVOICE_RESULT_A_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_EC5_ERP_CONTRACT_INVOICE_RESULT" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_EC5_CONTRACT_INVOICE_RESULT_A_OUTBinding" type="p1:SI_EC5_CONTRACT_INVOICE_RESULT_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_EC5_CONTRACT_INVOICE_RESULT_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_EC5_CONTRACT_INVOICE_RESULT_A_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_EC5_CONTRACT_INVOICE_RESULT_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_CONTRACT_INVOICE_RESULT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Acontract" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_EC5_CONTRACT_INVOICE_RESULT_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_CONTRACT_INVOICE_RESULT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Acontract" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

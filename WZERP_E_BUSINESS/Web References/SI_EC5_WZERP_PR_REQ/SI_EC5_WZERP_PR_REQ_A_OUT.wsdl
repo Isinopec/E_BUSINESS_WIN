@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p2="urn:sinopec:wzerp:ec5:purchase:control:integration" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="urn:sinopec:ec5:wzerp:purchase:control:integration" name="SI_EC5_WZERP_PR_REQ_A_OUT" targetNamespace="urn:sinopec:ec5:wzerp:purchase:control:integration" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_EC5_WZERP_PR_REQ_A_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:wzerp:ec5:purchase:control:integration" targetNamespace="urn:sinopec:wzerp:ec5:purchase:control:integration" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="SAPPURCHASEREQUESTS" type="p2:DT_EC5_WZERP_PR_REQUEST" />
+      <xsd:complexType name="DT_EC5_WZERP_PR_REQUEST">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">EC采购计划到物装ERP集成接口</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>消息号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="STRSYSNUMBER" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>系统号+Client号 如:P33900</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="BUSINESSTYPE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>XI</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="PURCHASEREQUEST">
+            <xsd:annotation>
+              <xsd:documentation>采购计划</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="STRORDERCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>EC系统订单编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRPLANNO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>采购申请号+行项目</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRCORPNAME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>企业编码</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRPROJECTNO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>项目编码</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRPRODCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>物料号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRPRODNAME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>物料描述（短文本）</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="INTQTY" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>数量</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRUNIT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>计量单位</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRSTANDARD" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>标准</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="INTBUDGETARY" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>概算金额</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DACONTIME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>开始交货期</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRCONADDR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>交货地点</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRMEMNAME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>用户姓名</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRMATERTYPE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>工业标准描述</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRUSERID" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>ERP用户ID</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DASUBTIME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>提交时间（EC得到采购计划的时间）</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRURL" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>附件URL</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRPROJECTNM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>项目简称</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STREQUIPNM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>装置名称</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRLOCATION" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>位号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRDRAW" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>图号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRPIECE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>件号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRSTANDALONE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>单机配量</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRAPPLY" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>申请量</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRHEAT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>热值(千卡/公斤)</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRRECEIVER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>收货单位</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="NMATKL" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>物料分类</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRMARK" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>备注</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZBDBZ" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>物料本地备注</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DAPLANTIME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>采购计划需求日期</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRSYSNUMBER" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>系统号+Client号 如:P33900</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p2.SAPPURCHASEREQUESTS">
+    <wsdl:documentation />
+    <wsdl:part name="SAPPURCHASEREQUESTS" element="p2:SAPPURCHASEREQUESTS" />
+  </wsdl:message>
+  <wsdl:portType name="SI_EC5_WZERP_PR_REQ_A_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_EC5_WZERP_PR_REQ_A_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_EC5_WZERP_PR_REQ_A_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:p2.SAPPURCHASEREQUESTS" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_EC5_WZERP_PR_REQ_A_OUTBinding" type="p1:SI_EC5_WZERP_PR_REQ_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_EC5_WZERP_PR_REQ_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_EC5_WZERP_PR_REQ_A_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_EC5_WZERP_PR_REQ_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_WZERP_PR_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Apurchase%3Acontrol%3Aintegration" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_EC5_WZERP_PR_REQ_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_WZERP_PR_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Apurchase%3Acontrol%3Aintegration" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

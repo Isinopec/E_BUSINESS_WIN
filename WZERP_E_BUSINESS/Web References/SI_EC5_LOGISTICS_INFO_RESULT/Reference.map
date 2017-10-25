@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.5.91.141:50000/dir/wsdl?p=sa/a1e8719e4b8736aaba0f12f3514e1a7f" filename="SI_EC5_LOGISTICS_INFO_RESULT_A_OUT.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

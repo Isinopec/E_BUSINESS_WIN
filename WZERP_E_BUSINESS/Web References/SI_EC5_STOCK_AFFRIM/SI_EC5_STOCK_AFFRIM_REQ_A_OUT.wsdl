@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:p2="urn:sinopec:wzerp:ec5:purchase:control:integration" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="urn:sinopec:ec5:wzerp:purchase:control:integration" name="SI_EC5_STOCK_AFFRIM_REQ_A_OUT" targetNamespace="urn:sinopec:ec5:wzerp:purchase:control:integration" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+  <wsp:UsingPolicy s0:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_EC5_STOCK_AFFRIM_REQ_A_OUT" />
+  <s0:types>
+    <xsd:schema xmlns="urn:sinopec:wzerp:ec5:purchase:control:integration" targetNamespace="urn:sinopec:wzerp:ec5:purchase:control:integration" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="STOCKAFFRIM" type="p2:DT_EC5_WZERP_STOCK_AFFRIM_REQ" />
+      <xsd:complexType name="DT_EC5_WZERP_STOCK_AFFRIM_REQ">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">EC发送采购方案信息到物装ERP集成接口数据定义</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>消息号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="STRSYSNUMBER" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>系统号+Client号 如:P33900</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="BUSINESSTYPE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>XI</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="R_NO" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>序号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="BUKRS" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>公司代码</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="PURORG" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>采购组织</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ERFQ_NO" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>EC询价单号/询价方案号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="BEDAT" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>采购凭证日期(询价单创建日期)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="AGDAT" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>投标/报价提交的截止日期</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="CGFS" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>采购方式</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ERFQ_TOPIC" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>EC询价书名称/询价方案名称</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="STRMEMNAME" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>批转/委托用户姓名</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="DASENDTIME" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>采购方案确定日期</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="STOCKAFFRIMENT">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="VENDOR_NO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>供应商或债权人帐户号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ERDAT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>报价日期</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ZZB" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>中标标记（1中标0不中标）</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRENQUTYPE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>价格条款</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRURL" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>附件URL</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="STOCKAFFRIMMAT">
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="PR_NO" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>采购计划单编号</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="PRICE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>单价</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="TRANSPORT_FEE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>运费</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="OTHER_FEE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>其它价格</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="CGLX" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>采购类型</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="STRTAX" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>税率</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="INTQTY" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>数量</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="ZCGBZ" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>采购备注</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="STRORDERCODE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>EC系统订单编号</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="DACONTIME" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>采购合同交货期(需求日期)</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </s0:types>
+  <s0:message name="p2.STOCKAFFRIM">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <s0:part name="STOCKAFFRIM" element="p2:STOCKAFFRIM" />
+  </s0:message>
+  <s0:portType name="SI_EC5_STOCK_AFFRIM_REQ_A_OUT">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <s0:operation name="SI_EC5_STOCK_AFFRIM_REQ_A_OUT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_EC5_STOCK_AFFRIM_REQ_A_OUT" />
+      </wsp:Policy>
+      <s0:input message="p1:p2.STOCKAFFRIM" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="SI_EC5_STOCK_AFFRIM_REQ_A_OUTBinding" type="p1:SI_EC5_STOCK_AFFRIM_REQ_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <s0:operation name="SI_EC5_STOCK_AFFRIM_REQ_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <s0:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </s0:input>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="SI_EC5_STOCK_AFFRIM_REQ_A_OUTService">
+    <s0:port name="HTTP_Port" binding="p1:SI_EC5_STOCK_AFFRIM_REQ_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_STOCK_AFFRIM_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Apurchase%3Acontrol%3Aintegration" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </s0:port>
+    <s0:port name="HTTPS_Port" binding="p1:SI_EC5_STOCK_AFFRIM_REQ_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_STOCK_AFFRIM_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Apurchase%3Acontrol%3Aintegration" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.5.91.141:50000/dir/wsdl?p=sa/df6cd2c9a7d03ac396d09ad0de419f56" filename="SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

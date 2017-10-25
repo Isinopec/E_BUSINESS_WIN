@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p2="urn:sinopec:wzerp:ec5:logistics:info" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="urn:sinopec:ec5:wzerp:logistics:info" name="SI_EC5_LOGISTICS_INFO_RESULT_A_OUT" targetNamespace="urn:sinopec:ec5:wzerp:logistics:info" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_EC5_LOGISTICS_INFO_RESULT_A_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:wzerp:ec5:logistics:info" targetNamespace="urn:sinopec:wzerp:ec5:logistics:info" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ContractWLPRResult">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>消息ID</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="STRSYSNUMBER" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>接口系统标识:SAP SID+Client如:P33900</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SENDTIME" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>发送时间</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="RESULTMAT">
+              <xsd:annotation>
+                <xsd:documentation>返回结果定义</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="ZZHTBH" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>ERP合同号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="VGBEL" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>采购订单号销售订单号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="VBPOS" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>采购订单或销售订单行项目号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="VBELN" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>ERP系统发票号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="POSNR" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>内/外向交货单行项目号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="ECORDERCODE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>EC订单编号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="RESULT" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>处理结果：0成功，1失败并返回具体的行项目处理结果,2已接收，正在处理</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="RESTIME" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>处理时间</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="RESDESC" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>处理描述</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p2.ContractWLPRResult">
+    <wsdl:documentation />
+    <wsdl:part name="ContractWLPRResult" element="p2:ContractWLPRResult" />
+  </wsdl:message>
+  <wsdl:portType name="SI_EC5_LOGISTICS_INFO_RESULT_A_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_EC5_LOGISTICS_INFO_RESULT_A_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_EC5_LOGISTICS_INFO_RESULT_A_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:p2.ContractWLPRResult" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_EC5_LOGISTICS_INFO_RESULT_A_OUTBinding" type="p1:SI_EC5_LOGISTICS_INFO_RESULT_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_EC5_LOGISTICS_INFO_RESULT_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_EC5_LOGISTICS_INFO_RESULT_A_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_EC5_LOGISTICS_INFO_RESULT_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_LOGISTICS_INFO_RESULT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Alogistics%3Ainfo" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_EC5_LOGISTICS_INFO_RESULT_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_LOGISTICS_INFO_RESULT_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Alogistics%3Ainfo" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

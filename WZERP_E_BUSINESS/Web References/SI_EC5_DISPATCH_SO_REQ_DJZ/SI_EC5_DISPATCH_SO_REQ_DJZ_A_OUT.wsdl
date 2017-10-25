@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:p1="urn:sinopec:ec5:dispatch:so:request" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUT" targetNamespace="urn:sinopec:ec5:dispatch:so:request" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+  <wsp:UsingPolicy s0:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUT" />
+  <s0:types>
+    <xsd:schema xmlns="urn:sinopec:ec5:dispatch:so:request" targetNamespace="urn:sinopec:ec5:dispatch:so:request" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="TRANSARG">
+        <xsd:annotation>
+          <xsd:documentation>框架协议</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>消息号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="STRSYSNUMBER" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>系统号+Client号 如:P33900</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ERPPONO" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>EC调剂协议号码</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CORPCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>企业码</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ERPORG" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>采购组织</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ERPGROUP" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>采购组</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ERPFACTORY" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>采购工厂</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CREATEUSER" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>EC下载业务用户，ERP中参考用户对照</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SUBTIME" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>审批时间</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ECORDERCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>EC订单编号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="TRANSORDERCODE" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>EC调剂合同号</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="KUNNR" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>KUNNR</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="BUKRS" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>销售方企业编码</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="TRANSARGMAT">
+              <xsd:annotation>
+                <xsd:documentation>下载企业的物资数据</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" name="ITEMNO" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>行项目号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="ECORDERCODE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>EC订单编号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="PRODCODE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>物资编码</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="MENGE" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>调出数量</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="MEINS" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>计量单位</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="NETPR" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>EC调剂协议单价</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="EINDT" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>EC交货日期</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="MWSKZ" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>税务代码</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="CHARG" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>批次编号</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="LGORT" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>库存地点</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </s0:types>
+  <s0:message name="p1.TRANSARG">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <s0:part name="TRANSARG" element="p1:TRANSARG" />
+  </s0:message>
+  <s0:portType name="SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUT">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+    <s0:operation name="SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUT" />
+      </wsp:Policy>
+      <s0:input message="p1:p1.TRANSARG" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUTBinding" type="p1:SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <s0:operation name="SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <s0:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </s0:input>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUTService">
+    <s0:port name="HTTP_Port" binding="p1:SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Adispatch%3Aso%3Arequest" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </s0:port>
+    <s0:port name="HTTPS_Port" binding="p1:SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_DISPATCH_SO_REQ_DJZ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Adispatch%3Aso%3Arequest" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

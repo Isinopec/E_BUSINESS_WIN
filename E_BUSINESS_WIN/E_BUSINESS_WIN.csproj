@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F63FF163-DA25-4388-9FD0-3D2932C1593C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>E_BUSINESS_WIN</RootNamespace>
+    <AssemblyName>E_BUSINESS_WIN</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>E_BUSINESS_WIN.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WZERP_E_BUSINESS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WZERP_E_BUSINESS\bin\Debug\WZERP_E_BUSINESS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ccye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ccye.Designer.cs">
+      <DependentUpon>ccye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gs.Designer.cs">
+      <DependentUpon>gs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hlhuang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hlhuang.Designer.cs">
+      <DependentUpon>hlhuang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="xpli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xpli.Designer.cs">
+      <DependentUpon>xpli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xqhu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xqhu.Designer.cs">
+      <DependentUpon>xqhu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xychen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xychen.Designer.cs">
+      <DependentUpon>xychen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yhleng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yhleng.Designer.cs">
+      <DependentUpon>yhleng.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ccye.resx">
+      <DependentUpon>ccye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hlhuang.resx">
+      <DependentUpon>hlhuang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="xpli.resx">
+      <DependentUpon>xpli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xqhu.resx">
+      <DependentUpon>xqhu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xychen.resx">
+      <DependentUpon>xychen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yhleng.resx">
+      <DependentUpon>yhleng.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WZERP_E_BUSINESS\WZERP_E_BUSINESS.csproj">
+      <Project>{4565ad0f-888d-449a-b6f9-10a48df4eec2}</Project>
+      <Name>WZERP_E_BUSINESS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

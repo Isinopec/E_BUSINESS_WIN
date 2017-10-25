@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4565AD0F-888D-449A-B6F9-10A48DF4EEC2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WZERP_E_BUSINESS</RootNamespace>
+    <AssemblyName>WZERP_E_BUSINESS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\AGREEMENTmodel.cs" />
+    <Compile Include="Model\SI_EPEC_DO_POST_RESPModel.cs" />
+    <Compile Include="Model\AGREEMENT_TEXT_RESULTmodel.cs" />
+    <Compile Include="Model\BID_PAYBACKModel.cs" />
+    <Compile Include="Model\BID_REFUNDModel.cs" />
+    <Compile Include="Model\BID_TRANSFERModel.cs" />
+    <Compile Include="Model\CONTRACT_CLOSED_RESULTModel.cs" />
+    <Compile Include="Model\CONTRACT_INVOICE_RESULTmodel.cs" />
+    <Compile Include="Model\CONTRACT_PAID_RESULTmodel.cs" />
+    <Compile Include="Model\CONTRACT_REQModel.cs" />
+    <Compile Include="Model\LOGISTICS_CONTRACTModel.cs" />
+    <Compile Include="Model\LOGISTICS_INFO_RESULTModel.cs" />
+    <Compile Include="Model\PURCHASE_AMOUNTModel.cs" />
+    <Compile Include="Model\SI_EC5_WZERP_PR_REQModel.cs" />
+    <Compile Include="Model\STOCK_AFFRIMModel.cs" />
+    <Compile Include="Model\STOCK_AUTHORIZEModel.cs" />
+    <Compile Include="Model\ZQIF006_RESPModel.cs" />
+    <Compile Include="Model\ZQ_IF001model.cs" />
+    <Compile Include="Model\ZQ_IF002Model.cs" />
+    <Compile Include="Model\PAY_CONTRACT_RESPmodel.cs" />
+    <Compile Include="Model\ZQ_IF003Model.cs" />
+    <Compile Include="Model\ZQ_IF004Model.cs" />
+    <Compile Include="Model\ZQ_IF005Model.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService\AGREEMENTService.cs" />
+    <Compile Include="UserService\EMALL_GET_SO_SUM_SService.cs" />
+    <Compile Include="UserService\IDEC_EMARKET_PO_CONFIRMService.cs" />
+    <Compile Include="UserService\SI_EPEC_DO_POST_RESPService.cs" />
+    <Compile Include="UserService\AGREEMENT_TEXT_RESULTService.cs" />
+    <Compile Include="UserService\BID_PAYBACKService.cs" />
+    <Compile Include="UserService\BID_REFUNDService.cs" />
+    <Compile Include="UserService\BID_TRANSFERService.cs" />
+    <Compile Include="UserService\CONTRACT_INVOICE_RESULTService.cs" />
+    <Compile Include="UserService\EPEC_ORDER_APP_RESPService.cs" />
+    <Compile Include="UserService\HT_CONTRACT_CLOSED_RESULTService.cs" />
+    <Compile Include="UserService\HT_CONTRACT_REQService.cs" />
+    <Compile Include="UserService\HT_LOGISTICS_CONTRACTService.cs" />
+    <Compile Include="UserService\LOGISTICS_INFO_RESULTService.cs" />
+    <Compile Include="UserService\CONTRACT_PAID_RESULTService.cs" />
+    <Compile Include="UserService\PAY_CONTRACT_RESPService.cs" />
+    <Compile Include="UserService\PURCHASE_AMOUNTService.cs" />
+    <Compile Include="UserService\SI_EC5_WZERP_PR_REQService.cs" />
+    <Compile Include="UserService\SI_EPEC_ORDER_CLOSE_RESPService.cs" />
+    <Compile Include="UserService\SI_IDEC_PO2ECC_REQService.cs" />
+    <Compile Include="UserService\STOCK_AFFRIMService.cs" />
+    <Compile Include="UserService\STOCK_AUTHORIZEService.cs" />
+    <Compile Include="UserService\ZQIF006_RESPService.cs" />
+    <Compile Include="UserService\ZQ_IF001Service.cs" />
+    <Compile Include="UserService\ZQ_IF002Service.cs" />
+    <Compile Include="UserService\ZQ_IF003Service.cs" />
+    <Compile Include="UserService\ZQ_IF004Service.cs" />
+    <Compile Include="UserService\ZQ_IF005Service.cs" />
+    <Compile Include="Web References\SI_EC5_ERP_AGREEMENT\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_EC5_ERP_CONTRACT_REQ1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_EC5_ERP_LOGISTICS_CONTRACT1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_EC5_LOGISTICS_INFO_RESULT\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_EC5_STOCK_AFFRIM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_EC5_STOCK_AUTHORIZE\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_EMALL_GET_SO_SUM_S\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_EPEC_DO_POST_RESP1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_EPEC_ORDER_APP_RESP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_EPEC_ORDER_CLOSE_RESP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_ERP_CONTRACT_CLOSED_RESULT_A_IN\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_IDEC_EMARKET_PO_CONFIRM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_IDEC_PO2ECC_REQ_A\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_PAY_CONTRACT_RESP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_EC5_WZERP_PR_REQ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_ERP_CONTRACT_INVOICE_RESULT\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_ERP_CONTRACT_PAID_RESULT\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_AGREEMENT_TEXT_RESULT\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_BID_PAYBACK\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_BID_REFUND\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_BID_TRANSFER\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_PURCHASE_AMOUNT\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_ZQ_IF001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_ZQ_IF003\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_ZQ_IF004\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_ZQ_IF005\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_ZQ_IF006_RESP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SI_WZERP_ZQ_IF002\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.5.91.139:50000/dir/wsdl%3fp=sa/a2c52c4c6f9e3cad936ce93acd33fa07">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EMALL_GET_SO_SUM_S\</RelPath>
+      <UpdateFromURL>http://10.5.91.139:50000/dir/wsdl%3fp=sa/a2c52c4c6f9e3cad936ce93acd33fa07</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EMALL_GET_SO_SUM_S_SI_EMALL_GET_SO_SUM_S_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/07394ef9eea63220b95a0ea485bc11aa">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_BID_PAYBACK\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/07394ef9eea63220b95a0ea485bc11aa</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_BID_PAYBACK_SI_EC5_BID_PAYBACK_REQ_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/1d6ed29a3bf7371e8b37b4cfd16531c2">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_PAY_CONTRACT_RESP\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/1d6ed29a3bf7371e8b37b4cfd16531c2</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EC5_WZERP_PAY_CONTRACT_RESP_SI_EC5_WZERP_PAY_CONTRACT_RESP_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/138813c9a0bd3fa2946eafc8561e6838">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_BID_TRANSFER\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/138813c9a0bd3fa2946eafc8561e6838</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_BID_TRANSFER_SI_WZERP_BID_TRANSFER_REQ_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/1ffe199937393389a97f4bfa13787193">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_ZQ_IF003\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/1ffe199937393389a97f4bfa13787193</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_ZQ_IF003_SI_WZERP_ZQ_IF003_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/33f3a7731a5a31faa6283acb0a29d933">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EPEC_ORDER_APP_RESP\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/33f3a7731a5a31faa6283acb0a29d933</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EPEC_ORDER_APP_RESP_SI_EPEC_ORDER_APP_RESP_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/39e443e9c8e133459d1ca312de32fcf1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EPEC_ORDER_CLOSE_RESP\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/39e443e9c8e133459d1ca312de32fcf1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EPEC_ORDER_CLOSE_RESP_SI_EPEC_ORDER_CLOSE_RESP_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/40fa166c9e19303aba069de7ef697366">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_IDEC_EMARKET_PO_CONFIRM\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/40fa166c9e19303aba069de7ef697366</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_IDEC_EMARKET_PO_CONFIRM_SI_IDEC_EMARKET_PO_CONFIRM_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/5b40f01916ac3d35bf63765664bc3b8c">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_ERP_CONTRACT_INVOICE_RESULT\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/5b40f01916ac3d35bf63765664bc3b8c</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_ERP_CONTRACT_INVOICE_RESULT_SI_EC5_CONTRACT_INVOICE_RESULT_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/74bd90610b11339abeb9ac0791f54601">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_ERP_CONTRACT_PAID_RESULT\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/74bd90610b11339abeb9ac0791f54601</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_ERP_CONTRACT_PAID_RESULT_SI_EC5_CONTRACT_PAID_RESULT_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/7ce26a188fdf38ecb1ae3724a2123192">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_PURCHASE_AMOUNT\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/7ce26a188fdf38ecb1ae3724a2123192</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_PURCHASE_AMOUNT_SI_EC5_PURCHASE_AMOUNT_RESP_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/859e539c32d93da382555033abca8015">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_ZQ_IF006_RESP\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/859e539c32d93da382555033abca8015</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_ZQ_IF006_RESP_SI_WZERP_ZQ_IF006_RESP_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/86b0d08de53831c28cb68ac17b209eb6">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_IDEC_PO2ECC_REQ_A\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/86b0d08de53831c28cb68ac17b209eb6</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_IDEC_PO2ECC_REQ_A_SI_IDEC_PO2ECC_REQ_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/a1e8719e4b8736aaba0f12f3514e1a7f">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EC5_LOGISTICS_INFO_RESULT\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/a1e8719e4b8736aaba0f12f3514e1a7f</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EC5_LOGISTICS_INFO_RESULT_SI_EC5_LOGISTICS_INFO_RESULT_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/a92de91f85503fbbbbc957bd7d5e86e4">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_ZQ_IF005\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/a92de91f85503fbbbbc957bd7d5e86e4</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_ZQ_IF005_SI_WZERP_ZQ_IF005_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/b1e34f1047f5303f8bc9cb9a45be9dc2">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EC5_ERP_CONTRACT_REQ1\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/b1e34f1047f5303f8bc9cb9a45be9dc2</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EC5_ERP_CONTRACT_REQ1_SI_EC5_WZERP_CONTRACT_REQ_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/b9260e950f8431e9b2ff3a1e22474d5b">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EC5_ERP_LOGISTICS_CONTRACT1\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/b9260e950f8431e9b2ff3a1e22474d5b</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EC5_ERP_LOGISTICS_CONTRACT1_SI_EC5_LOGISTICS_CONTRACT_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/c6186d73442f370588a6f410f29e0dab">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_AGREEMENT_TEXT_RESULT\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/c6186d73442f370588a6f410f29e0dab</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_AGREEMENT_TEXT_RESULT_SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/cf50b08ff6613849bd6d48ad1fbcc16f">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EPEC_DO_POST_RESP1\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/cf50b08ff6613849bd6d48ad1fbcc16f</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EPEC_DO_POST_RESP1_SI_EPEC_DO_POST_RESP_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/d005c9f666dd30ce9082a97326ddefd2">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_ZQ_IF004\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/d005c9f666dd30ce9082a97326ddefd2</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_ZQ_IF004_SI_WZERP_ZQ_IF004_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/d60984f6c51f3a8e9d8a1d4a2a079ffc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_ZQ_IF002\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/d60984f6c51f3a8e9d8a1d4a2a079ffc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_ZQ_IF002_SI_WZERP_ZQ_IF002_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/d7bb2587bcb33833853ee9dabd3cf532">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_BID_REFUND\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/d7bb2587bcb33833853ee9dabd3cf532</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_BID_REFUND_SI_EC5_BID_REFUND_REQ_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/da6c15d15eb63831b477d3b4c465b7fe">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EC5_STOCK_AFFRIM\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/da6c15d15eb63831b477d3b4c465b7fe</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EC5_STOCK_AFFRIM_SI_EC5_STOCK_AFFRIM_REQ_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/dd6b2cc63cce31ad8dc399632da8d84d">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_ERP_CONTRACT_CLOSED_RESULT_A_IN\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/dd6b2cc63cce31ad8dc399632da8d84d</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_ERP_CONTRACT_CLOSED_RESULT_A_IN_SI_EC5_CONTRACT_CLOSED_RESULT_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/df6cd2c9a7d03ac396d09ad0de419f56">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EC5_STOCK_AUTHORIZE\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/df6cd2c9a7d03ac396d09ad0de419f56</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EC5_STOCK_AUTHORIZE_SI_EC5_STOCK_AUTHORIZE_REQ_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/e7d861dd9a833bfa846178dff1322974">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EC5_ERP_AGREEMENT\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/e7d861dd9a833bfa846178dff1322974</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EC5_ERP_AGREEMENT_SI_EC5_ERP_AGREEMENT_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/f13604e4ac05326ba4abfbb0b58c5730">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_EC5_WZERP_PR_REQ\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/f13604e4ac05326ba4abfbb0b58c5730</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_EC5_WZERP_PR_REQ_SI_EC5_WZERP_PR_REQ_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.5.91.141:50000/dir/wsdl%3fp=sa/fc93118adb5d3617a796d321394921fb">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SI_WZERP_ZQ_IF001\</RelPath>
+      <UpdateFromURL>http://10.5.91.141:50000/dir/wsdl%3fp=sa/fc93118adb5d3617a796d321394921fb</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WZERP_E_BUSINESS_SI_WZERP_ZQ_IF001_SI_WZERP_ZQ_IF001_A_OUTService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EC5_ERP_AGREEMENT\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EC5_ERP_AGREEMENT\SI_EC5_ERP_AGREEMENT_A_OUT.wsdl" />
+    <None Include="Web References\SI_EC5_ERP_CONTRACT_REQ1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EC5_ERP_CONTRACT_REQ1\SI_EC5_WZERP_CONTRACT_REQ_A_OUT.wsdl" />
+    <None Include="Web References\SI_EC5_ERP_LOGISTICS_CONTRACT1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EC5_ERP_LOGISTICS_CONTRACT1\SI_EC5_LOGISTICS_CONTRACT_A_OUT.wsdl" />
+    <None Include="Web References\SI_EC5_LOGISTICS_INFO_RESULT\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EC5_LOGISTICS_INFO_RESULT\SI_EC5_LOGISTICS_INFO_RESULT_A_OUT.wsdl" />
+    <None Include="Web References\SI_EC5_STOCK_AFFRIM\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EC5_STOCK_AFFRIM\SI_EC5_STOCK_AFFRIM_REQ_A_OUT.wsdl" />
+    <None Include="Web References\SI_EC5_STOCK_AUTHORIZE\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EC5_STOCK_AUTHORIZE\SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT.wsdl" />
+    <None Include="Web References\SI_EMALL_GET_SO_SUM_S\DT_GET_SO_SUM_RESP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SI_EMALL_GET_SO_SUM_S\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EMALL_GET_SO_SUM_S\SI_EMALL_GET_SO_SUM_S_OUT.wsdl" />
+    <None Include="Web References\SI_EPEC_DO_POST_RESP1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EPEC_DO_POST_RESP1\SI_EPEC_DO_POST_RESP_A_OUT.wsdl" />
+    <None Include="Web References\SI_EPEC_ORDER_APP_RESP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EPEC_ORDER_APP_RESP\SI_EPEC_ORDER_APP_RESP_A_OUT.wsdl" />
+    <None Include="Web References\SI_EPEC_ORDER_CLOSE_RESP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EPEC_ORDER_CLOSE_RESP\SI_EPEC_ORDER_CLOSE_RESP_A_OUT.wsdl" />
+    <None Include="Web References\SI_ERP_CONTRACT_CLOSED_RESULT_A_IN\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_ERP_CONTRACT_CLOSED_RESULT_A_IN\SI_EC5_CONTRACT_CLOSED_RESULT_A_OUT.wsdl" />
+    <None Include="Web References\SI_IDEC_EMARKET_PO_CONFIRM\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_IDEC_EMARKET_PO_CONFIRM\SI_IDEC_EMARKET_PO_CONFIRM_A_OUT.wsdl" />
+    <None Include="Web References\SI_IDEC_PO2ECC_REQ_A\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_IDEC_PO2ECC_REQ_A\SI_IDEC_PO2ECC_REQ_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_PAY_CONTRACT_RESP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_PAY_CONTRACT_RESP\SI_EC5_WZERP_PAY_CONTRACT_RESP_A_OUT.wsdl" />
+    <None Include="Web References\SI_EC5_WZERP_PR_REQ\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_EC5_WZERP_PR_REQ\SI_EC5_WZERP_PR_REQ_A_OUT.wsdl" />
+    <None Include="Web References\SI_ERP_CONTRACT_INVOICE_RESULT\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_ERP_CONTRACT_INVOICE_RESULT\SI_EC5_CONTRACT_INVOICE_RESULT_A_OUT.wsdl" />
+    <None Include="Web References\SI_ERP_CONTRACT_PAID_RESULT\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_ERP_CONTRACT_PAID_RESULT\SI_EC5_CONTRACT_PAID_RESULT_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_AGREEMENT_TEXT_RESULT\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_AGREEMENT_TEXT_RESULT\SI_WZERP_AGREEMENT_TEXT_RESULT_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_BID_PAYBACK\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_BID_PAYBACK\SI_EC5_BID_PAYBACK_REQ_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_BID_REFUND\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_BID_REFUND\SI_EC5_BID_REFUND_REQ_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_BID_TRANSFER\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_BID_TRANSFER\SI_WZERP_BID_TRANSFER_REQ_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_PURCHASE_AMOUNT\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_PURCHASE_AMOUNT\SI_EC5_PURCHASE_AMOUNT_RESP_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_ZQ_IF001\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_ZQ_IF001\SI_WZERP_ZQ_IF001_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_ZQ_IF003\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_ZQ_IF003\SI_WZERP_ZQ_IF003_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_ZQ_IF004\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_ZQ_IF004\SI_WZERP_ZQ_IF004_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_ZQ_IF005\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_ZQ_IF005\SI_WZERP_ZQ_IF005_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_ZQ_IF006_RESP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_ZQ_IF006_RESP\SI_WZERP_ZQ_IF006_RESP_A_OUT.wsdl" />
+    <None Include="Web References\SI_WZERP_ZQ_IF002\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SI_WZERP_ZQ_IF002\SI_WZERP_ZQ_IF002_A_OUT.wsdl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

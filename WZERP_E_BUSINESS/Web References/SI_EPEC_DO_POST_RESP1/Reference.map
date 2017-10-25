@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.5.91.141:50000/dir/wsdl?p=sa/cf50b08ff6613849bd6d48ad1fbcc16f" filename="SI_EPEC_DO_POST_RESP_A_OUT.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

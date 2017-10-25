@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:sinopec:uncrm:integration" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_EMALL_GET_SO_SUM_S_OUT" targetNamespace="urn:sinopec:uncrm:integration" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_EMALL_GET_SO_SUM_S_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:uncrm:integration" targetNamespace="urn:sinopec:uncrm:integration" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_GET_SO_SUM_REQ" type="p1:DT_GET_SO_SUM_REQ" />
+      <xsd:element name="MT_GET_SO_SUM_RESP" type="p1:DT_GET_SO_SUM_RESP" />
+      <xsd:complexType name="DT_BAPIRET2">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">石化统一CRM系统集成BAPI RETURN数据结构定义</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">7cee30e052fc11e6a3da0000003c6a36</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="TYPE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a3972f87d11e4cbba626c668312b0</xsd:appinfo>
+              <xsd:documentation>消息类型: S 成功,E 错误,W 警告,I 信息,A 中断</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a3973f87d11e4b174626c668312b0</xsd:appinfo>
+              <xsd:documentation>消息, 消息类</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="NUMBER" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a3974f87d11e48b03626c668312b0</xsd:appinfo>
+              <xsd:documentation>消息, 消息编号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="MESSAGE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a3975f87d11e4af18626c668312b0</xsd:appinfo>
+              <xsd:documentation>消息文本</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="LOG_NO" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a3976f87d11e4c61e626c668312b0</xsd:appinfo>
+              <xsd:documentation>应用程序日志: 日志号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="LOG_MSG_NO" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a3977f87d11e4c7b9626c668312b0</xsd:appinfo>
+              <xsd:documentation>应用日志：内部邮件序列号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="MESSAGE_V1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a3978f87d11e4bd85626c668312b0</xsd:appinfo>
+              <xsd:documentation>消息,消息变量</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="MESSAGE_V2" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a3979f87d11e4c73d626c668312b0</xsd:appinfo>
+              <xsd:documentation>消息,消息变量</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="MESSAGE_V3" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a397af87d11e4a24f626c668312b0</xsd:appinfo>
+              <xsd:documentation>消息,消息变量</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="MESSAGE_V4" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a397bf87d11e49580626c668312b0</xsd:appinfo>
+              <xsd:documentation>消息,消息变量</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="PARAMETER" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a397cf87d11e48801626c668312b0</xsd:appinfo>
+              <xsd:documentation>参数名称</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ROW" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a397df87d11e4b58e626c668312b0</xsd:appinfo>
+              <xsd:documentation>参数中的行</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="FIELD" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a397ef87d11e48ef3626c668312b0</xsd:appinfo>
+              <xsd:documentation>参数中的字段</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SYSTEM" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">c96a397ff87d11e4ab2d626c668312b0</xsd:appinfo>
+              <xsd:documentation>引发消息的逻辑系统</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_GET_SO_SUM_RESP">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">E贸网批量查询订单总金额同步反馈数据定义</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">befec30e889e11e7be620000003c6a37</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ES_MSG_HEAD" type="p1:MSG_HEAD">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">6e712b7048d011e6c12c00000000741d</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ET_RETURN" type="p1:DT_BAPIRET2">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">a242a04e530011e695ff626c668312b0</xsd:appinfo>
+              <xsd:documentation>凭证返回信息</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ET_DMBTR">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">08ef8f90530311e68b08626c668312b0</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="CRMNO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">08ef8f5f530311e6b9c5626c668312b0</xsd:appinfo>
+                    <xsd:documentation>CRM订单</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="VBELN" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">08ef8f60530311e684c1626c668312b0</xsd:appinfo>
+                    <xsd:documentation>销售凭证</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="AUART" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">08ef8f61530311e6c8c2626c668312b0</xsd:appinfo>
+                    <xsd:documentation>销售凭证类型</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DMBTR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">08ef8f62530311e6cd09626c668312b0</xsd:appinfo>
+                    <xsd:documentation>按本位币计的金额</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_GET_SO_SUM_REQ">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">E贸网批量查询订单总金额请求数据定义</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">c09e1098889711e780490000003c6a37</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="IS_MSG_HEAD" type="p1:MSG_HEAD">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">6e712b7048d011e6c12c00000000741d</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="IV_TESTRUN" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">a242a04e530011e695ff626c668312b0</xsd:appinfo>
+              <xsd:documentation>测试运行</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="IT_VBELN">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">24ebc2a3530511e68756626c668312b0</xsd:appinfo>
+              <xsd:documentation>客户编号</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="SIGN" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">24ebc2a4530511e6a5eb626c668312b0</xsd:appinfo>
+                    <xsd:documentation>创建 SELECT-OPTIONS 表格时的 SIGN 字段</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="OPTION" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">24ebc2a5530511e69c75626c668312b0</xsd:appinfo>
+                    <xsd:documentation>SELECT-OPTIONS 表格结构中的 OPTION 字段</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="LOW" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">24ebc2a6530511e6816d626c668312b0</xsd:appinfo>
+                    <xsd:documentation>订单号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="HIGH" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">24ebc2a7530511e697bd626c668312b0</xsd:appinfo>
+                    <xsd:documentation>订单号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MSG_HEAD">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">石化统一CRM系统集成通用消息抬头数据定义</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">b76f64f152fb11e686920000003c6a36</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MANDT" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">da76bc24746811e4803300215d90d210</xsd:appinfo>
+              <xsd:documentation>接受数据的ECC系统</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="GUID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">da76bc25746811e497cd00215d90d210</xsd:appinfo>
+              <xsd:documentation>必输，第三方发出消息为必输，外围系统生成GUID，关联反馈消息</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="PROXY_ID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">da76bc26746811e4b7bd00215d90d210</xsd:appinfo>
+              <xsd:documentation>ERP发出消息为必输，ERP系统生成GUID，用于ERP关联消息和监控平台使用</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SYSTEM_ID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">da76bc27746811e49ba700215d90d210</xsd:appinfo>
+              <xsd:documentation>必输，调用服务的外围系统号，关联反馈消息</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="OPERATOR" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">da76bc28746811e4c32b00215d90d210</xsd:appinfo>
+              <xsd:documentation>外部系统调用人</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SPRAS" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">6f957213793811e4c90700215d90d210</xsd:appinfo>
+              <xsd:documentation>语言编码</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="INTERFACE_ID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">6f957214793811e4a3ab00215d90d210</xsd:appinfo>
+              <xsd:documentation>接口名称，可选，PI系统提供</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SENDER" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">6f957215793811e48f2000215d90d210</xsd:appinfo>
+              <xsd:documentation>发送方，可选，PI系统提供</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="RECIVER" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">da76bc29746811e498b500215d90d210</xsd:appinfo>
+              <xsd:documentation>接收方，可选，PI系统提供</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SENDTIME" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">da76bc2a746811e49fa000215d90d210</xsd:appinfo>
+              <xsd:documentation>发送时间，可选，14位，格式：YYYYMMDDHHMMSS</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_GET_SO_SUM_REQ">
+    <wsdl:documentation />
+    <wsdl:part name="MT_GET_SO_SUM_REQ" element="p1:MT_GET_SO_SUM_REQ" />
+  </wsdl:message>
+  <wsdl:message name="MT_GET_SO_SUM_RESP">
+    <wsdl:documentation />
+    <wsdl:part name="MT_GET_SO_SUM_RESP" element="p1:MT_GET_SO_SUM_RESP" />
+  </wsdl:message>
+  <wsdl:portType name="SI_EMALL_GET_SO_SUM_S_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_EMALL_GET_SO_SUM_S_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_EMALL_GET_SO_SUM_S_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_GET_SO_SUM_REQ" />
+      <wsdl:output message="p1:MT_GET_SO_SUM_RESP" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_EMALL_GET_SO_SUM_S_OUTBinding" type="p1:SI_EMALL_GET_SO_SUM_S_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_EMALL_GET_SO_SUM_S_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_EMALL_GET_SO_SUM_S_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_EMALL_GET_SO_SUM_S_OUTBinding">
+      <address location="http://hqxd1:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EMALL_DEV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EMALL_GET_SO_SUM_S_OUT&amp;interfaceNamespace=urn%3Asinopec%3Auncrm%3Aintegration" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_EMALL_GET_SO_SUM_S_OUTBinding">
+      <address location="https://hqxd1:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EMALL_DEV&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EMALL_GET_SO_SUM_S_OUT&amp;interfaceNamespace=urn%3Asinopec%3Auncrm%3Aintegration" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

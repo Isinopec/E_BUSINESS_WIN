@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p2="urn:sinopec:wzerp:ec5:purchase:control:integration" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="urn:sinopec:ec5:wzerp:purchase:control:integration" name="SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT" targetNamespace="urn:sinopec:ec5:wzerp:purchase:control:integration" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:wzerp:ec5:purchase:control:integration" targetNamespace="urn:sinopec:wzerp:ec5:purchase:control:integration" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="STOCKAUTHORIZE" type="p2:DT_EC5_WZERP_STOCK_AUTHORIZE_REQ" />
+      <xsd:complexType name="DT_EC5_WZERP_STOCK_AUTHORIZE_REQ">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">EC采购委托到物装ERP集成接口</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>消息号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="STRSYSNUMBER" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>系统号+Client号 如:P33900</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="BUSINESSTYPE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>XI</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="STOCKAUTHORIZELIST">
+            <xsd:annotation>
+              <xsd:documentation>采购委托</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="STRORDERCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>EC系统订单编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PZWT_NO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>批转号/委托号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="INTTYPE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>批转/委托标识</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="INTCODE_TRAN" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>批转/委托企业</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="INTCODE_TO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>批转/委托到的企业</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRMEMNAME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>批转/委托用户姓名</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DASUBTIME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>采购申请提报时间</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="INTATTRTYPE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>采购类型</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="INTFLAG" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>供应商范围</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRPLANNO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>订单提报企业采购申请号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="STRURL" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>附件URL</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="DALEADTIME" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>采购委托单确定时间</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="INTCOCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>填报单位</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p2.STOCKAUTHORIZE">
+    <wsdl:documentation />
+    <wsdl:part name="STOCKAUTHORIZE" element="p2:STOCKAUTHORIZE" />
+  </wsdl:message>
+  <wsdl:portType name="SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:p2.STOCKAUTHORIZE" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_EC5_STOCK_AUTHORIZE_REQ_A_OUTBinding" type="p1:SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_EC5_STOCK_AUTHORIZE_REQ_A_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_EC5_STOCK_AUTHORIZE_REQ_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Apurchase%3Acontrol%3Aintegration" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_EC5_STOCK_AUTHORIZE_REQ_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_STOCK_AUTHORIZE_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Apurchase%3Acontrol%3Aintegration" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

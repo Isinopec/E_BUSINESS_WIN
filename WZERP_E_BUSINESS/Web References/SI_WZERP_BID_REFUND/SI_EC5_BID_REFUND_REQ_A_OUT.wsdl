@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:sinopec:ec5:wzerp:bid:payment:info" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_EC5_BID_REFUND_REQ_A_OUT" targetNamespace="urn:sinopec:ec5:wzerp:bid:payment:info" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_EC5_BID_REFUND_REQ_A_OUT" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sinopec:ec5:wzerp:bid:payment:info" targetNamespace="urn:sinopec:ec5:wzerp:bid:payment:info" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="BIDREFUND" type="p1:DT_EC5_BID_REFUND_REQUEST" />
+      <xsd:complexType name="DT_EC5_BID_REFUND_REQUEST">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">EC招投标退款信息接口数据定义</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MSGID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>消息号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="SYSNUMER" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>系统号+Client号 如:P33900</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="COMPANY" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>公司ID</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="REFUNDREQNUM" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>退款申请单编码</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="BIDCONSIGN" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>委托单ID</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="BIDFILECODE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>招标编号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ITEMCODE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>项目批准文号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ITEMNAME" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>项目名称</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="OPERATETYPE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>操作类型</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="REFUNDTYPE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>退款类型</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="STRZBBM" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>供应商标准编码</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="STRCORPNAME" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>供应商全称</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="CURRENCY" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>币种</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="RATE" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>汇率</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ACCOUNTNAME" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>付款人户名</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="BANKNAME" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>付款人开户行</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ACCOUNTNUM" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>付款人账号</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="REALNAME" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>招标业务员姓名</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ZZFPT" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>支付平台</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="BIDREFUNDMAT">
+            <xsd:annotation>
+              <xsd:documentation>物料信息</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="LINEITEM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>行项目编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PACKCODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>包编号</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="AMOUNT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>订单金额</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="PAYEDMONEY" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>收款金额</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="REMARK" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:documentation>回款摘要</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="VOUCHER">
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="VOUCHERNO" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>会计凭证号</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="VOUCHERYEAR" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:documentation>会计年度</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p1.BIDREFUND">
+    <wsdl:documentation />
+    <wsdl:part name="BIDREFUND" element="p1:BIDREFUND" />
+  </wsdl:message>
+  <wsdl:portType name="SI_EC5_BID_REFUND_REQ_A_OUT">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_EC5_BID_REFUND_REQ_A_OUT">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_EC5_BID_REFUND_REQ_A_OUT" />
+      </wsp:Policy>
+      <wsdl:input message="p1:p1.BIDREFUND" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_EC5_BID_REFUND_REQ_A_OUTBinding" type="p1:SI_EC5_BID_REFUND_REQ_A_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_EC5_BID_REFUND_REQ_A_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_EC5_BID_REFUND_REQ_A_OUTService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_EC5_BID_REFUND_REQ_A_OUTBinding">
+      <address location="http://hqxt1.sinopec.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_BID_REFUND_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Abid%3Apayment%3Ainfo" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_EC5_BID_REFUND_REQ_A_OUTBinding">
+      <address location="https://hqxt1.sinopec.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BS_EC5_QAS&amp;receiverParty=&amp;receiverService=&amp;interface=SI_EC5_BID_REFUND_REQ_A_OUT&amp;interfaceNamespace=urn%3Asinopec%3Aec5%3Awzerp%3Abid%3Apayment%3Ainfo" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

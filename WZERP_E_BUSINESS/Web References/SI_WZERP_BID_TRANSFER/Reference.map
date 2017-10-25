@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.5.91.141:50000/dir/wsdl?p=sa/138813c9a0bd3fa2946eafc8561e6838" filename="SI_WZERP_BID_TRANSFER_REQ_A_OUT.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

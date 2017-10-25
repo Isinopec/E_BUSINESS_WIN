@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.5.91.141:50000/dir/wsdl?p=sa/7ce26a188fdf38ecb1ae3724a2123192" filename="SI_EC5_PURCHASE_AMOUNT_RESP_A_OUT.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>
